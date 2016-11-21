@@ -1,0 +1,46 @@
+.heading{
+
+
+		height:100px;
+		width:100px;
+
+	float:left;
+	background-color:powderblue;
+}
+.headings{
+
+
+	height:100px;
+	width:100px;
+
+
+float:right;
+	background-color:pink;
+}
+.heading1{
+
+
+	height:100px;
+	width:100px;
+float:left;
+	background-color:pink;
+}
+.headings1{
+
+	height:100px;
+	width:100px;
+	float:right;
+background-color:powderblue;
+
+}
+
+.header {
+	background-color:green;
+	height:200px;
+	width:200px;
+	margin-left: 240px;
+	margin-top: 150px;
+}
+.active{
+	background-color:powderblue;
+}
