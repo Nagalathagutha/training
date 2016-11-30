@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>getjson</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/httpjson.js"></script>
+		 <style>
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body ng-app="jsonapp">
+		<div ng-controller="jsoncntrl">
+			
+			<httpdirective data="myjson" getdetails="getjson()"></httpdirective>
+		
+		</div>
+	</body>
+</html>

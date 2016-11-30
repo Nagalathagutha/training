@@ -1,0 +1,16 @@
+
+<button ng-click="getdetails()">getempdetails</button><br><br>
+<table>
+	<tr>
+		<td>NAME</td>
+		<td>EMP ID</td>
+		<td>EXPERIENCE</td>
+		<td>DESIGNATION</td>
+	</tr>
+	<tr ng-repeat="details in data">
+		<td>{{details.ename}}</td>
+		<td>{{details.empid}}</td>
+		<td>{{details.exp}}</td>
+		<td>{{details.designation}}</td>
+	</tr>
+</table>
