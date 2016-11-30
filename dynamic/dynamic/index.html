@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>dynamic</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/dynamic.js"></script>
+		<link href="css/dynamic.css" rel="stylesheet">
+	
+	</head>
+	<body ng-app="myapp" ng-controller="mycntrl">
+		<div class="design">
+			Name:<input ng-model="name" type="text"><br><br>
+			password:<input ng-model="password" type="password"><br><br>
+			<button ng-click="array()">submit</button><br><br>
+			<div ng-repeat="x in display">{{x}}
+			</div>
+		</div>
+	</body>
+</html>
