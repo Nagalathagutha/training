@@ -13,7 +13,12 @@
 	<body ng-app="jsonapp">
 		<div ng-controller="jsoncntrl">
 			
-			<httpdirective data="myjson" getdetails="getjson()"></httpdirective>
+			<httpdirective data="myjson" getdetails="getjson()" deletedata="deleteFun()"></httpdirective>
+		
+		</div>
+		<div ng-controller="jsoncntrl2">
+			
+			<httpdirective data="myjson" getdetails="getjson()" deletedata="deleteFun()"></httpdirective>
 		
 		</div>
 	</body>

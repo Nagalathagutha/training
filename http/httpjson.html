@@ -7,10 +7,12 @@
 		<td>EXPERIENCE</td>
 		<td>DESIGNATION</td>
 	</tr>
-	<tr ng-repeat="details in data">
+	<tr ng-repeat="details in data.empdetails track by $index">
+		
 		<td>{{details.ename}}</td>
 		<td>{{details.empid}}</td>
 		<td>{{details.exp}}</td>
 		<td>{{details.designation}}</td>
+		<td><button ng-click="deletedata($index)">delete</button></td>
 	</tr>
 </table>

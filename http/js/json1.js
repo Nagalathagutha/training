@@ -1,18 +1,19 @@
- {
+{
  "empdetails":[{
-  "ename":"latha",
-  "empid":"1024",
+  "ename":"varudhini",
+  "empid":"1027",
   "exp":"0",
   "designation":"trainee"
  },{
-  "ename":"namratha",
-  "empid":"1039",
+  "ename":"deepika",
+  "empid":"1035",
   "exp":"1",
   "designation":"software engineer"
  },
  {
-    "ename":"varudhini",
-  "empid":"1029",
+ 
+   "ename":"vamsi",
+  "empid":"1024",
   "exp":"1",
   "designation":"software engineer"
  }
