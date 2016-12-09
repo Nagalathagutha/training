@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>isolatescope</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/isolate.js"></script>
+		
+	</head>
+	<body ng-app="myapp">
+		<div ng-controller="mycntrl">
+			<my-directive name="details" users="clickme()" ></my-directive>
+		</div>
+	</body>
+</html>
