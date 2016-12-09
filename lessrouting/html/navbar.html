@@ -1,0 +1,102 @@
+	<div class="panel panel-default">
+		<div class="panel-heading" style="background-color:black;color:white;padding:0px!important;border-color:black">
+			<div ng-controller="dateCntrl">
+				{{date | date:'EEE,MMM dd,yyyy h:mm:ss a'}}
+				<h5 style="float:right;color:white;font-size:20px;margin-top:2px;padding-right:10px">
+				sign in
+				<a class="anc" href="https://www.facebook.com/TimesofIndia"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a class="anc" href="https://twitter.com/timesofindia"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+				<a class="anc" href="https://www.youtube.com/user/TimesOfIndiaChannel"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+				<a class="anc" href="https://plus.google.com/+timesindia"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></h5>
+			</div>
+			
+			<div class="title">
+				<h1>THE TIMES OF INDIA</h1>
+				<h5>Hyderabad  <img src="images/sun.jpg" height="7px" width="7px"> 24°C <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></h5>
+			
+			</div>
+		</div>
+		<div class="panel-body" style="background-color:#be2819;padding:0px!important;height:3px;">
+			<nav class="navbar navbar-default" style="background-color:#be2819;padding:0px!important;border-color:#be2819;">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					
+					
+						<button type="button" style="background-color:white" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>	
+						<div class="collapse navbar-collapse" id="myNavbar" >
+					
+						
+							<ul class="nav navbar-nav "  style="padding:0px!important">
+								
+								<li class="nav-item dropdown">
+								
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a>
+									
+								
+								</li>		
+								<li class="nav-item dropdown">
+								
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City</a>
+									<div class="dropdown-menu" >
+										<a  ui-sref="index.kurtas">Hyderabad</a><br>
+										<a  ui-sref="index.shirtdetails">Delhi</a><br>
+										<a  ui-sref="index.politics">Chennai</a>
+									</div>
+								
+								</li>		
+							
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">World</a>
+									<div class="dropdown-menu" >
+									
+										<a  ui-sref="index.kurtas">Us</a><br>
+										<a  ui-sref="#">China</a><br>
+										<a  ui-sref="#">Pakistan</a>
+									</div>
+									
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business</a>
+									<div class="dropdown-menu" >
+										<a  ui-sref="index.shirtdetails">India Business</a><br>
+										<a  ui-sref="#">International</a><br>
+										<a  ui-sref="#">Markets</a>
+									</div>
+									
+								</li>	
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech</a>
+									<div class="dropdown-menu" >
+										<a  ui-sref="index.watches">Tech News</a><br>
+										<a  ui-sref="#">Gadgets</a><br>
+										<a  ui-sref="#">reviews</a>
+									</div>
+									
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sports</a>
+									<div class="dropdown-menu" >
+										<a  ui-sref="index.watches">Cricket</a><br>
+										<a  ui-sref="#">Tennis</a><br>
+										<a  ui-sref="#">Football</a>
+									</div>
+									
+								</li>
+								<li class="nav-item dropdown postn" style="float:right;">
+									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a>
+									<div class="dropdown-menu" >
+										<input type="text" placeholder="Search">
+									</div>
+									
+								</li>
+							
+							</ul>
+	
+						</div>
+
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+<div ui-view="new"></div>
