@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>promises</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/promises.js"></script>
+		<link href="css/promise.css" rel="stylesheet">
+	</head>
+	<body ng-app="promiseapp">
+
+		<div ng-controller="promisecntrl">
+		
+			<table>
+				<tr>
+					<td>NAME</td>
+					<td>EMP ID</td>
+					<td>EXPERIENCE</td>
+					<td>DESIGNATION</td>
+				</tr>
+				<tr ng-repeat="detail in getdetails.empdetails " >
+					
+					<td>{{detail.ename}}</td>
+					<td>{{detail.empid}}</td>
+					<td>{{detail.exp}}</td>
+					<td>{{detail.designation}}</td>
+					
+				</tr>
+			</table>
+		</div>	
+	</div>
+</html>
