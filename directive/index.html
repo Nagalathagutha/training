@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="directives.js"></script>
+		<style>
+			.div2{
+			 background-color:red;
+			}
+		</style>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCntrl">
+		<!-- {{name|practiceFilter}}-->
+		{{capital}}
+				<latha-dir names="name" btn="clicks()"><p>gutha</p></latha-dir>
+		
+		</div>
+		<div ng-controller="myCntrl1">
+		<form name="myForm">
+		<input name="myName" ng-model="enter" required>
+		<span ng-show="myForm.myName.$touched">
+			<div ng-repeat="x in name|filter:enter">
+				<a href="hi.html">{{x}}</a>
+			</div>	
+		
+		</span>
+
+		</form>
+
+			
+	</body>
+</html>
