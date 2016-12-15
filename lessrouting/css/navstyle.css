@@ -1,0 +1,28 @@
+ #first{
+ background-color:black;
+ color:white;
+ padding:0px!important;
+ border-color:black;
+ }
+ #head{
+ float:right;
+ color:white;
+ font-size:20px;
+ margin-top:2px;
+ padding-right:10px;
+ }
+ #times{
+ font-family:times new roman;
+ font-weight:bold;
+ font-size:50px;
+ }
+#navd1{
+ background-color:#be2819;
+ padding:0px!important;
+ height:3px;
+ }
+#navd2{
+background-color:#be2819;
+padding:0px!important;
+border-color:#be2819;
+}

@@ -1,5 +1,64 @@
 {
-"politicsarray":[{
-"news":"Note ban a 'foolish decision, not bold', Paytm means 'Pay to Modi', says Rahul Gandhi at demonetisation protest."
-}]
-}
+	"trail":[
+	{
+		"name":"hyderabad",
+		"url":"hyderabad"
+		},
+	{
+		"name":"chennai",
+		"url":"politics"
+	},
+	{
+		"name":"delhi",
+		"url":"delhi"
+	},
+	{
+		"name":"us",
+		"url":"us"
+	},
+	{
+		"name":"china",
+		"url":"china"
+	},
+	
+	{
+		"name":"pakistan",
+		"url":"pakistan"
+	},
+	{
+		"name":"indianbusiness",
+		"url":"indianbusiness"
+	},
+	{
+		"name":"international",
+		"url":"international"
+	},
+	{
+		"name":"market",
+		"url":"market"
+	},
+	{
+		"name":"tech",
+		"url":"tech"
+	},
+	{
+		"name":"gadget",
+		"url":"gadget"
+	},
+	{
+		"name":"review",
+		"url":"review"
+	},
+	{
+		"name":"news",
+		"url":"news"
+	},
+	{
+		"name":"tennis",
+		"url":"tennis"
+	},
+	{
+		"name":"footbal",
+		"url":"footbal"
+	}
+	]}

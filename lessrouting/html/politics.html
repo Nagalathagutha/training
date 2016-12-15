@@ -1,10 +1,16 @@
 
 <div ng-controller="newsCntrl">
-<div  class="panel panel-default vertical panel-body" ng-repeat="details in news1.politicsarray">
+	<div ng-repeat="details in news1.politicsarray">
+		<div class="row">
+			<div class= "col-xs-8 col-sm-5 col-md-3 col-sm-offset-1" style="color:#777"><br>
+				<img style="width:250px;"ng-src="images/{{details.pic}}"><br>
+				<i>jaya dead body at ghat</i>
 
-<p><img style="width:250px;"ng-src="images/{{details.pic}}"><br>{{details.news}} <p>
-<p>{{details.news1}}</p>
-
-
-</div>
+			</div>
+			
+			<div class="col-xs-9 col-sm-6 col-md-5"><br>
+				<b>CHENNAI :</b>{{details.news}}	
+			</div>
+		</div>
+	</div>		
 </div>

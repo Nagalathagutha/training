@@ -5,18 +5,20 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="css/navstyle.css" rel="stylesheet">
+		<link href="css/news.css" rel="stylesheet">
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/news.css" rel="stylesheet">
 		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
 		<script src="js/news.js"></script>	
 	</head>
 	<body ng-app="newsApp">
-	<navbar-directive></navbar-directive><br><br>
-	<div ng-controller="newsCntrl">
+			
+		<div ng-controller="newsCntrl">
 		
-		
-		<ui-view class="col-xs-12"></ui-view>
+			<navbar-directive></navbar-directive><br><br>
+			<ui-view class="col-xs-12"></ui-view>
 		</div>
 	</body>
 </html>

@@ -9,7 +9,7 @@
 		
                 
         })
-		.state("index.news",{
+		.state("news",{
 			url:"/news",
 			views:{
 				"new":{
@@ -17,11 +17,123 @@
 				}
 			}
 		})
-		.state("index.politics",{
+		.state("politics",{
 			url:"/politics",
 			views:{
 				"new":{
 			templateUrl:'html/politics.html'
+				}
+			}
+		})
+		.state("weather",{
+			url:"/weather",
+			views:{
+				"new":{
+			templateUrl:'html/weather.html'
+				}
+			}
+		})
+		.state("indianbusiness",{
+			url:"/indianbusiness",
+			views:{
+				"new":{
+			templateUrl:'html/indianbusiness.html'
+				}
+			}
+		})
+		.state("tennis",{
+			url:"/tennis",
+			views:{
+				"new":{
+			templateUrl:'html/tennis.html'
+				}
+			}
+		})
+		.state("hyderabad",{
+			url:"/hyderabad",
+			views:{
+				"new":{
+			templateUrl:'html/hyderabad.html'
+				}
+			}
+		})
+		.state("delhi",{
+			url:"/delhi",
+			views:{
+				"new":{
+			templateUrl:'html/delhi.html'
+				}
+			}
+		})
+		.state("us",{
+			url:"/us",
+			views:{
+				"new":{
+			templateUrl:'html/us.html'
+				}
+			}
+		})
+		.state("china",{
+			url:"/china",
+			views:{
+				"new":{
+			templateUrl:'html/china.html'
+				}
+			}
+		})
+		.state("pakistan",{
+			url:"/pakistan",
+			views:{
+				"new":{
+			templateUrl:'html/pakistan.html'
+				}
+			}
+		})
+		.state("international",{
+			url:"/international",
+			views:{
+				"new":{
+			templateUrl:'html/international.html'
+				}
+			}
+		})
+		.state("market",{
+			url:"/market",
+			views:{
+				"new":{
+			templateUrl:'html/market.html'
+				}
+			}
+		})
+		.state("tech",{
+			url:"/tech",
+			views:{
+				"new":{
+			templateUrl:'html/tech.html'
+				}
+			}
+		})
+		.state("gadget",{
+			url:"/gadget",
+			views:{
+				"new":{
+			templateUrl:'html/gadget.html'
+				}
+			}
+		})
+		.state("review",{
+			url:"/review",
+			views:{
+				"new":{
+			templateUrl:'html/review.html'
+				}
+			}
+		})
+		.state("footbal",{
+			url:"/footbal",
+			views:{
+				"new":{
+			templateUrl:'html/footbal.html'
 				}
 			}
 		});
@@ -41,13 +153,13 @@
 	values.push(json1);
 	var json2= politicsService.updates('js/politicsjson1.js');
 	values.push(json2);
-	var json3= politicsService.updates('js/politicsjson2.js');
-	values.push(json3);
+
 	console.log(values);
 	$q.all(values).then(function(data){
-		$scope.news1= data[0];
+		$scope.news1 = data[0];
 		console.log($scope.news1);
-		
+		$scope.name=data[1];
+		console.log($scope.name);
 		
 		
 	 }); 
