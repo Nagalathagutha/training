@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Broadcasting</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script>
+ var app = angular.module('app', []);
+ 
+ app.controller("firstCtrl", function ($scope,$rootScope) {
+ $scope.name="";
+ console.log($scope.name);
+ $scope.id="";
+ $scope.show={};
+ $scope.handleClick = function () {
+ 
+ $scope.show=$scope.name;
+  //$scope.show.push($scope.id);
+ console.log($scope.show);
+ $rootScope.$broadcast('eventName', $scope.show);
+ };
+ 
+ });
+ 
+ app.controller("secondCtrl", function ($scope,$rootScope) {
+ $scope.$on('eventName', function (event, args) {
+ $scope.message = args;
+ console.log($scope.message);
+ });
+ });
+ 
+ </script>
+</head>
+<body ng-app="app">
+ <div ng-controller="firstCtrl" style="border:2px solid #E75D5C; padding:5px;">
+ <h1>Parent Controller</h1>
+ <input type="text" ng-model="name">
+ <input type="text" ng-model="id">
+ <button ng-click="handleClick();">Broadcast</button>
+ <br /><br />
+ 
+ </div>
+ <div ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+ <h1>Child Controller</h1>
+ <p>Broadcast Message : </p>
+ </div>
+</body>
+</html>
