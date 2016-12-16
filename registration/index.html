@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>RegistrationForm</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+		<script src="js/registration.js"></script>
+	</head>
+	<body ng-app="registrationApp">
+		
+		
+		<div ui-view="home"></div>
+		<div ng-controller="registrationCntrl"  ui-view="login"></div>
+			<div ng-controller="educationalCntrl"  ui-view="education"></div>
+				<div ng-controller="professionalCntrl"  ui-view="profession">
+				</div>
+			
+	</body>	
+</html>
