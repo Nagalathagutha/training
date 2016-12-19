@@ -1,129 +1,128 @@
-	<div class="panel panel-default">
+	<div class="panel panel-default" style="margin-bottom:0px!important;border:0px!important">
 		<div class="panel-heading" id="first">
 			<div ng-controller="dateCntrl">
 				{{date | date:'EEE,MMM dd,yyyy h:mm:ss a'}}
 				<h5 id="head">
-				sign in
+				<a class="anc" href="html/index.html">sign in</a>
 				<a class="anc" href="https://www.facebook.com/TimesofIndia"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 				<a class="anc" href="https://twitter.com/timesofindia"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 				<a class="anc" href="https://www.youtube.com/user/TimesOfIndiaChannel"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
 				<a class="anc" href="https://plus.google.com/+timesindia"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></h5>
 			</div>
-			
+
 			<div class="title">
 				<h1 id="times">THE TIMES OF INDIA</h1>
 				<h5>Hyderabad  <img src="images/sun.jpg" height="7px" width="7px"> 24°C <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></h5>
-			
+
 			</div>
 		</div>
-		<div class="panel-body" id="navd1">
-			<nav class="navbar navbar-default" id="navd2">
-				<div class="container-fluid">
-					<div class="navbar-header">
-					
-					
-						<button type="button" style="background-color:white" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>	
-						<div class="collapse navbar-collapse" id="myNavbar" >
-					
-						
-							<ul class="nav navbar-nav "  style="padding:0px!important">
-								
-								<li class="nav-item dropdown">
-								
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a>
-									<div class="dropdown-menu" >
-										<a  ui-sref="hyderabad">Hyderabad</a><br>
-										<a  ui-sref="delhi">Delhi</a><br>
-										<a  ui-sref="politics">Chennai</a>
-										<a  ui-sref="us">US</a><br>
-										<a  ui-sref="china">China</a><br>
-										<a  ui-sref="pakistan">Pakistan</a>
-										<a  ui-sref="indianbusiness">India Business</a><br>
-										<a  ui-sref="international">International</a><br>
-										<a  ui-sref="market">Markets</a>
-										<a  ui-sref="tech">Tech News</a><br>
-										<a  ui-sref="gadget">Gadgets</a><br>
-										<a  ui-sref="review">reviews</a>
-										<a  ui-sref="news">Cricket</a><br>
-										<a  ui-sref="tennis">Tennis</a><br>
-										<a  ui-sref="football">Football</a>
-									</div>
-								
-								</li>		
-								<li class="nav-item dropdown">
-								
-									<a class="nav-link dropdown-toggle" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City</a>
-									<div class="dropdown-menu" >
-										<a  ui-sref="hyderabad">Hyderabad</a><br>
-										<a  ui-sref="delhi">Delhi</a><br>
-										<a  ui-sref="politics">Chennai</a>
-										
-									</div>
-								
-								</li>		
-							
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">World</a>
-									<div class="dropdown-menu" >
-									
-										<a  ui-sref="us">US</a><br>
-										<a  ui-sref="china">China</a><br>
-										<a  ui-sref="pakistan">Pakistan</a>
-									</div>
-									
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business</a>
-									<div class="dropdown-menu" >
-										<a  ui-sref="indianbusiness">India Business</a><br>
-										<a  ui-sref="international">International</a><br>
-										<a  ui-sref="market">Markets</a>
-									</div>
-									
-								</li>	
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech</a>
-									<div class="dropdown-menu" >
-										<a  ui-sref="tech">Tech News</a><br>
-										<a  ui-sref="gadget">Gadgets</a><br>
-										<a  ui-sref="review">reviews</a>
-									</div>
-									
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sports</a>
-									<div class="dropdown-menu" >
-										<a  ui-sref="news">Cricket</a><br>
-										<a  ui-sref="tennis">Tennis</a><br>
-										<a  ui-sref="footbal">Football</a>
-									</div>
-									
-								</li>
-								<li class="nav-item dropdown postn" style="float:right;">
-									<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a>
-									<div class="dropdown-menu" >
-										<!--<input type="text" placeholder="Search">-->
-										<form name="myForm">
-											<input name="myName" ng-model="enter" required>
-											<span ng-show="myForm.myName.$valid">
-												<div ng-repeat="x in name.trail|filter:enter">
-													<a ui-sref="{{x.url}}">{{x.name}}</a>
-												</div>	
-											
-											</span>
+	</div>	
+	<nav class="navbar navbar-default" id="navd2">
+		<div class="container-fluid">
+			<div class="navbar-header">
 
-										</form>
-									</div>
-									
-								</li>
-							
-							</ul>
-	
-						</div>
 
-					</div>
+				<button type="button" style="background-color:white" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false"></button>
+				<div class="collapse navbar-collapse" id="myNavbar" style="border-color:#be2819!important">
+
+					<ul class="nav navbar-nav "  style="padding:0px!important">
+
+						<li class="nav-item dropdown">
+
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a>
+							<div class="dropdown-menu" >
+								<a  ui-sref="hyderabad">Hyderabad</a><br>
+								<a  ui-sref="delhi">Delhi</a><br>
+								<a  ui-sref="politics">Chennai</a>
+								<a  ui-sref="us">US</a><br>
+								<a  ui-sref="china">China</a><br>
+								<a  ui-sref="pakistan">Pakistan</a>
+								<a  ui-sref="indianbusiness">India Business</a><br>
+								<a  ui-sref="international">International</a><br>
+								<a  ui-sref="market">Markets</a>
+								<a  ui-sref="tech">Tech News</a><br>
+								<a  ui-sref="gadget">Gadgets</a><br>
+								<a  ui-sref="review">reviews</a>
+								<a  ui-sref="news">Cricket</a><br>
+								<a  ui-sref="tennis">Tennis</a><br>
+								<a  ui-sref="football">Football</a>
+							</div>
+
+						</li>
+						<li class="nav-item dropdown">
+
+							<a class="nav-link dropdown-toggle" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City</a>
+							<div class="dropdown-menu" >
+								<a  ui-sref="hyderabad">Hyderabad</a><br>
+								<a  ui-sref="delhi">Delhi</a><br>
+								<a  ui-sref="politics">Chennai</a>
+
+							</div>
+
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">World</a>
+							<div class="dropdown-menu" >
+
+								<a  ui-sref="us">US</a><br>
+								<a  ui-sref="china">China</a><br>
+								<a  ui-sref="pakistan">Pakistan</a>
+							</div>
+
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business</a>
+							<div class="dropdown-menu" >
+								<a  ui-sref="indianbusiness">India Business</a><br>
+								<a  ui-sref="international">International</a><br>
+								<a  ui-sref="market">Markets</a>
+							</div>
+
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tech</a>
+							<div class="dropdown-menu" >
+								<a  ui-sref="tech">Tech News</a><br>
+								<a  ui-sref="gadget">Gadgets</a><br>
+								<a  ui-sref="review">reviews</a>
+							</div>
+
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sports</a>
+							<div class="dropdown-menu" >
+								<a  ui-sref="news">Cricket</a><br>
+								<a  ui-sref="tennis">Tennis</a><br>
+								<a  ui-sref="footbal">Football</a>
+							</div>
+
+						</li>
+						<li class="nav-item dropdown postn" style="float:right;">
+							<a class="nav-link dropdown-toggle"  id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a>
+							<div class="dropdown-menu" >
+								<!--<input type="text" placeholder="Search">-->
+								<form name="myForm">
+									<input name="myName" ng-model="enter" required>
+									<span ng-show="myForm.myName.$valid">
+										<div ng-repeat="x in name.trail|filter:enter">
+											<a ui-sref="{{x.url}}">{{x.name}}</a>
+										</div>
+
+									</span>
+
+								</form>
+							</div>
+
+						</li>
+
+					</ul>
+
 				</div>
-			</nav>
+
+			</div>
 		</div>
-	</div>
+	</nav>
+		
+
 <div ui-view="new"></div>

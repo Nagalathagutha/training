@@ -1,24 +1,22 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>News</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="css/navstyle.css" rel="stylesheet">
-		<link href="css/news.css" rel="stylesheet">
-
+    <link href="../css/navstyle.css" rel="stylesheet">
+    <link href="../css/news.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-		<script src="js/news.js"></script>
+		<script src="../js/news.js"></script>
 	</head>
 	<body ng-app="newsApp">
-		
-		<div ng-controller="newsCntrl">
-
-			<navbar-directive></navbar-directive><br><br>
-			<ui-view class="col-xs-12"></ui-view>
-		</div>
+    <div ng-controller="loginCntrl">
+      <input type="text" placeholder="name" ng-model="name"><br>
+      <input type="email" placeholder="Email" ng-model="mailid"><br>
+      <input type="password" placeholder="password" ng-model="password"><br>
+      <button ng-click="submit()">SAVE</button>
+    </div>
 	</body>
 </html>

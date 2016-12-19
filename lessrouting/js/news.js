@@ -4,10 +4,10 @@
    $stateProvider
    .state("index", {
 		url:"",
-		
+
 		  templateUrl: 'html/home.html'
-		
-                
+
+
         })
 		.state("news",{
 			url:"/news",
@@ -137,6 +137,7 @@
 				}
 			}
 		});
+
  });
  app.service('politicsService',function($http,$q){
 	 this.updates=function(url){
@@ -144,7 +145,7 @@
 		 $http.get(url).success(def.resolve)
 		 .error(def.reject);
 		 return def.promise;
-		 
+
 	 }
  });
  app.controller('newsCntrl',function($scope,politicsService,$q){
@@ -160,18 +161,43 @@
 		console.log($scope.news1);
 		$scope.name=data[1];
 		console.log($scope.name);
-		
-		
-	 }); 
+
+
+	 });
  });
   app.controller('dateCntrl',function($scope){
 	  $scope.date = new Date();
 	  console.log($scope.date);
   });
+  app.controller('loginCntrl',function($scope,loginFactory,$location){
+    $scope.name="";
+    $scope.mailid="";
+    $scope.password="";
+    
+    $scope.submit=function(){
+      $scope.loginData=loginFactory.saveData($scope.name,$scope.mailid,$scope.password);
+      console.log($scope.loginData);
+
+    }
+
+  });
+  app.service('loginFactory',function(){
+
+      this.saveData=function(name,mailid,password){
+        var details={};
+        details.name=name;
+        details.mailid=mailid;
+        details.password=password;
+        console.log(details);
+        return details;
+      }
+
+  })
+
  app.directive('navbarDirective',function(){
 		return{
 			restrict:'E',
-		
+
 		templateUrl:'html/navbar.html'
 		}
 	});
