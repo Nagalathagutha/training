@@ -1,10 +1,11 @@
 
 {
-  "graph": [
-    {  "y":"46615.06", "indexlabel": "Harvest Cost" },
-    {  "y": "2740.00", "indexlabel": "Transport Cost" },
-    {  "y": "3519.75", "indexlabel": "Cooling Cost" },
-    {  "y": "5658.75", "indexlabel": "Packing Cost"},
-    {  "y": "20576.00", "indexlabel": "Growing Cost" }
+  "Data": [
+				
+				{  "y": 2740.00, "indexlabel": "Transport Cost","color":"rgb(127,96,130)" },
+				{  "y": 3519.75, "indexlabel": "Cooling Cost","color":"rgb(132,183,0)" },
+				{  "y": 5658.75, "indexlabel": "Packing Cost","color":"rgb(160,209,206)"},
+				{  "y": 20576.00, "indexlabel": "Growing Cost","exploded": true,"color":"rgb(47,158,175)"},
+				{  "y": 46615.06, "indexlabel": "Harvest Cost","color":"rgb(196,69,62)"}
       ]
-    }
+}
