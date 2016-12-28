@@ -1,0 +1,66 @@
+{ "novocloud":[
+  {
+    "heading":"Growing Cost",
+    "totalcost":"$20,756.00",
+    "cost":"$3.80",
+    "price":"$3.80",
+    "array1":[{"heading":  "0 131-4",
+     "totalcost":"$20,576.00",
+      "cost":"$3.80",
+      "price":"$3.80"
+      
+    },
+    {"heading":  "0 171-5",
+     "totalcost":"57,504.00",
+      "cost":"$6.66",
+      "price":"$6.66"
+      
+    },
+    {"heading":  "0 151-4",
+     "totalcost":"$39,712.00",
+      "cost":"$9.44",
+      "price":"$9.44"
+      
+    },
+    {"heading":  "0 611A-13",
+     "totalcost":"$60,800.00",
+      "cost":"$14.29",
+      "price":"$14.29"
+      
+    },
+    {"heading":  "0 611A-13",
+     "totalcost":"$60,800.00",
+      "cost":"$14.29",
+      "price":"$14.29"
+      
+    }]
+  },
+  {
+     "heading":"Harvest Cost",
+    "totalcost":"$20,756.00",
+    "cost":"$3.80",
+    "price":"$3.80",
+    "array1":[]
+  },
+   {
+			 "heading":"Transport Cost",
+    "totalcost":"$20,756.00",
+    "cost":"$3.80",
+    "price":"$3.80",
+    "array1":[]
+	 },
+  {
+     "heading":"cooling Cost",
+    "totalcost":"$20,756.00",
+    "cost":"$3.80",
+    "price":"$3.80",
+    "array1":[]
+  },{
+     "heading":"Packing Cost",
+    "totalcost":"$20,756.00",
+    "cost":"$3.80",
+    "price":"$3.80",
+    "array1":[]
+  }
+  ]
+}
