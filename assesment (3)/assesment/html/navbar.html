@@ -132,7 +132,8 @@
                     <tbody class="outerTable" ng-repeat="details in getData.novocloud">
                         <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
                             <td class="col-md-3">
-                                <button class="plusIcon"><i class="fa fa-plus icon" aria-hidden="true"></i>
+
+                                <button id='togglebutton' ng-click='show=!show' ng-class="{'fa fa-plus-square-o':!show,'fa fa-minus-square-o':show}" aria-hidden="true">
                                 </button> {{details.heading}}</td>
                             <td class="col-md-2">{{details.totalcost}}</td>
                             <td class="col-md-2">{{details.cost}}</td>

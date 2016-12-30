@@ -43,5 +43,9 @@ app.controller('novoCloudCntrl', function($scope, novoService) {
         });
         chart.render();
     }
+    var show=true;
+    $scope.minusicon=function(){
+      var  show=false;
+    }
 
 });

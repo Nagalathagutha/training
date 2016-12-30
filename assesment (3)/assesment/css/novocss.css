@@ -300,11 +300,11 @@ td:first-child {
 td:last-child {
     border-right: none !important;
 }
-.plusIcon {
-    font-size: 10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 0.5px;
+#togglebutton {
+   background-color:transparent;
+  border:none;
+  height: 18px;
+  width: 22px;
 }
 .icon {
     color: 1px solid rgb(220, 220, 220)!important;
