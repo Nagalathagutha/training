@@ -1,0 +1,193 @@
+
+<div ng-controller="novoCloudCntrl">
+    <div class="row scroll">
+         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 navwidth">
+            <div class="col-md-4 col-sm-3 col-lg-4 col-xs-4 col-xs-ofset-1 col-md-offset-1 " id="navbar1">
+
+                <img src="logo/navcloudlogo.jpg" id="logostyle">
+            </div>
+            <div class="col-md-6 col-lg-offset-1 col-lg-6 col-sm-7 col-xs-offset-2  col-xs-offset-2 col-xs-8 col-md-offset-1 ">
+                <div class="col-md-5  col-lg-8 col-sm-7 col-xs-7 col-xs-ofset-1">
+                    <div class="form-group pull-right" id="inputstyle">
+                        <input type="text" class="form-control" id="usr">
+                        <span class="glyphicon glyphicon-search" id="search"></span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                    <i class="fa fa-user" id="userstyle"></i>
+                </div>
+                <div class="col-md-2 col-lg-1 col-sm-1 col-xs-1">
+                    <i class="fa fa-ellipsis-v fa-lg" aira-hidden="true" id="optionstyle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position:fixed;width:100%;">
+        <div class="row scroll">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 navwidth">
+                <div id="navbar2">
+                    <div class="col-md-1 col-xs-1 col-lg-1 col-xs-1" id="colmd">
+                        <button class="buttoncollapse" ng-click="sidenavbar()"><i class="fa fa-align-justify" title="Align Justify" id="collapse"></i></button>
+                        <h4 id="fontstyle"> Farmer/Production</h4>
+                        <h4 id="fontstyle1"> ROI</h4>
+                    </div>
+                </div>
+             </div>   
+        </div>
+        <div class="row scroll">
+    	     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 navwidth">
+    		    <nav class="navbar " id="navbar3">
+    		        <div class="container-fluid">
+
+    		            <ul class="nav navbar-nav">
+    		            	<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 listmargin">
+    		                <li>Strawberries</li>
+    		                </div>
+    		                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 listmargin">
+    		                <li>Blueberries</li>
+    		                </div>
+    		                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 listmargin">
+    		                <li>Lettuce</li>
+    		                </div>
+    		                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 listmargin">
+    		                <li>Broccoli</li>
+    		                </div>
+    		                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 listmargin">
+    		                <li>Cauliflower</li>
+    		                </div>
+    		            </ul>
+    		        </div>
+    		    </nav>
+    		</div>
+    	 </div>  
+
+    	<div class="row scroll">
+             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 navwidth">
+                <div id="navbar4">
+           
+
+                <ul class="nav navbar-nav">
+                   
+                    <li  class= "navbar4 "> ROI
+                        <br>
+                        <h4 class="first">-13.42% </h4>
+                    </li>
+                   
+                     
+                    <li class="navbar4"> Total Cases
+                        <br>
+                        <h4 class="first">5415
+    				</h4> </li>
+    				
+    				
+                    <li class="navbar4"> Total Cost
+                        <h4 class="first">
+    				$484,058.89 </h4>
+                    </li>
+                    
+                    
+                    <li class="navbar4"> Total Sales
+                        <h4 class="first">$481,649.50 
+    				</h4>
+                    </li>
+                   
+                  
+                    <li class="navbar4">Total Cost/lb
+                        <h4 class="first">$2.15
+    				</h4>
+                    </li>
+                    
+                   
+                    
+                    <li class="navbar4">Price/lb
+                        <h4 class="first">$2.29s
+    				</h4>
+                    </li>
+                  
+                   
+                    <li class="navbar4">Net Revenue
+                        <h4 style="color:rgb(166,80,83)" class="first">-$2409.39
+    				</h4>
+                    </li>
+                   
+                </ul>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="row scroll">
+            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5 titlestyle table1">
+                <div class="title">
+                    <div class="col-md-offset-4  col-sm-offset-4 col-xs-offset-4 col-md-2 col-lg-3 col-xs-4 col-sm-4 table1">
+                        <h5 class="tableheading">Total Cost</h5>
+                    </div>
+                    <div class="col-md-2 col-lg-3 col-sm-2 col-xs-2 table1">
+                        <h5 class="tableheading">Cost/Case</h5>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-2  col-xs-2 text-left table1 heading">
+                        <h5 class="tableheading">Price/Case</h5>
+                    </div>
+                </div>
+                <div class="table table-responsive tablesizing">
+                    <table style="width:100%;">
+                        <tbody class="outerTable" ng-repeat="details in getData.novocloud">
+                            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                                <td class="col-md-3">
+                                    <button id='main-table-button' ng-click='show=!show' ng-class="{'fa fa-plus-square-o':!show,'fa fa-minus-square-o':show}" aria-hidden="true">
+                                    </button> {{details.heading}}</td>
+                                <td class="col-md-2">{{details.totalcost}}</td>
+                                <td class="col-md-2">{{details.cost}}</td>
+                                <td class="col-md-2">{{details.price}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo1">
+                                        <table class="col-md-12">
+                                            <tbody ng-repeat="costdetail in details.array1">
+                                                <tr class="trstyle">
+                                                    <td class="col-md-3 firsttdstyle" style="padding-left:20px">{{costdetail.heading}}</td>
+                                                    <td class="col-md-2 tdstyle">{{costdetail.totalcost }}</td>
+                                                    <td class="col-md-2 tdstyle">{{costdetail.cost}}</td>
+                                                    <td class="col-md-2 tdstyle">{{costdetail.price}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+            <div class="panel panel-default">
+                    <div class="panel-heading">Cost Chart</div>
+                     
+                        <div class="panel-body">
+            
+                
+                        <div id="chartContainer" class="piecontent">
+                        </div>
+             
+                    </div>
+             </div>
+        </div>
+     </div>
+   </div>  
+       <div style="position: absolute;"  ng-show="showme" class="page">
+        
+        <div class="sidenavbar ">
+               
+                    <a href="#" class="sidefont">Farmer Menu</a>
+                    <button class="buttoncollapse"  ng-click="sidenavbarcollapse()"  ><i class="fa fa-align-justify" title="Align Justify" id="collapse"></i></button><br><br>
+                    <p class="section"></p>
+                   
+                    <a href="#" class="sidefonts">Farmer Dashboard</a><br>
+                    <a href="#" class="sidefonts">Production</a><br>
+                    <a href="#" class="sidefonts">Food Safety</a><br>
+                    <a href="#" class="sidefonts">Tracebility</a><br>
+
+                </div>
+            </div>
+        </div>
