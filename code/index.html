@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/gamejs.js"></script>
+	
+		<style>
+			.key{
+				display:inline;
+				list-style-type: none;
+				padding:10px;
+				height:3px;
+				width:3px;
+				background-color: #c1d72e;
+
+			}
+			.won{
+				color:#c1d72e;
+				text-align:center;
+				margin-top: 50px;
+				font-size: 50px;
+
+			}
+
+		</style>
+	</head>
+	<body ng-app="gameApp">
+		<div ng-controller="gameCntrl">
+
+			<p class="won">{{winning}}</p>
+			<!-- <p><h3>you have</h3>{{totallives}}<h3>lives</h3></p> -->
+				<ul style="margin-top: 100px;">
+					<li class="key" id="1">a</li>
+					<li class="key">b</li>
+					<li class="key">c</li>
+					<li class="key">d</li>
+					<li class="key">e</li>
+					<li class="key">f</li>
+					<li class="key">g</li>
+					<li class="key">h</li>
+					<li class="key">i</li>
+					<li class="key">j</li>
+					<li class="key">k</li>
+					<li class="key">l</li>
+					<li class="key">m</li>
+					<li class="key">n</li><br><br><br>
+					<li style="margin-left:20px;" class="key">o</li>
+					<li class="key">p</li>
+					<li class="key">q</li>
+					<li class="key">r</li>
+					<li class="key">s</li>
+					<li class="key">t</li>
+					<li class="key">u</li>
+					<li class="key">v</li>
+					<li class="key">w</li>
+					<li class="key">x</li>
+					<li class="key">y</li>
+					<li class="key">z</li>
+				</ul>
+			
+			
+			<h1>Category:{{cat}}</h1><br>
+			<h1>Word Length:{{cluelength}}</h1><br>
+			<h1>Clue:{{displayclue}}</h1><br>
+			<ul style="display:inline-block;margin-top:30px;" ng-repeat="x in dash track by $index;">
+			<li style="list-style-type: none;">{{x}}</li>
+			</ul><br>
+			<ul   style="display:inline-block;margin-top:30px;" ng-repeat="element in getele track by $index">
+			<h1><li style="list-style-type: none;">{{element}}</li></h1>
+			</ul><br><br>
+			<button ng-click="next()">Play again</button>
+		</div>		
+	</body>
+</html>
