@@ -1,0 +1,212 @@
+<div class="col-lg-12 col-md-12">
+<div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10">
+        <table>
+	        <thead>
+	            <tr>
+	                <th class="col-md-2"></th>
+	                <th class="col-md-2">Frequency
+	                    <br>Type</th>
+	                <th class="col-md-2">Start
+	                    <br> Date</th>
+	                <th class="col-md-2">End Date</th>
+	                <th class="col-md-2">Total Cash
+	                    <br> With Tax</th>
+	                <th class="col-md-2">Actions</th>
+	            </tr>
+	   		</thead>
+
+   			<tbody ng-repeat="x in totaldetails track by $index">	
+   				<tr data-toggle="collapse" data-target="#{{$index}}" class="accordion-toggle trbottom">
+				  	<td class="col-md-2">{{x.paymentType}}</td>
+				    <td class="col-md-2"></td>
+				    <td class="col-md-2"></td>
+				    <td class="col-md-2"></td>
+		           <td class="col-md-2"></td>
+		            <td class="col-md-2"> <button id='togglebutton' class="arrowtoggle" ng-click='show=!show;' ng-class="{'fa fa-angle-right':!show,'fa fa-angle-down':show}" aria-hidden="true"> </button></td>
+		        </tr>
+		        <td colspan="6" class="hiddenRow">
+                    <div class="accordian-body collapse" id="{{$index}}">
+                        <table class="innertable col-lg-12  col-md-12">
+                            <tbody  ng-repeat="x in totaldetails">
+                                <tr>
+                               	 <td class="col-md-2"></td>
+                                    <td class="col-md-2">{{x.dataObj.frequency}}</td>
+                                    <td class="col-md-2">{{x.dataObj.date}}</td>
+                                    <td class="col-md-2">{{x.dataObj.PaymentDueDaydata}}</td>
+	            					<td class="col-md-2"></td>
+	            			
+	           						 <td class="col-md-2"><button class="arrowtoggle"><i class="fa fa-times" aria-hidden="true" ng-click="delete()"></i></button><button class="arrowtoggle"><i class="fa fa-pencil" aria-hidden="true" ng-click="editmodal()"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+              	</td>
+			
+	        </tbody>
+	        <thead class="addcolor">
+		        <tr>
+			        <td class="col-md-2"></td>
+			        <td class="col-md-2"></td>
+			        <td class="col-md-2"></td>
+			        <td class="col-md-2"><button class="add" ng-click="firstModal()"><i class="fa fa-plus" aria-hidden="true"></i> Add</button></td>
+			        <td class="col-md-2"></td>
+			        <td class="col-md-2"></td>
+		        </tr>
+	        </thead>
+        </table>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12">
+
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-9">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content modalstyle">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Payment Information</h4>
+                    </div>
+                    <div class="modal-body" style="height:500px!important; overflow-y:scroll !important;height:100px;">
+                        <div class="col-lg-6 col-md-6">
+                           <label for="exampleSelect1">Payment Type<sup-script class="asteric">*</sup-script></label>
+			               
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="paymentdata"></span>
+			                   <button  class=" dropdown-toggle  arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down arrow "></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in paymentarray | filter:test track by $index" ng-click=paymentinput(data)>
+			                            <li>{{data}}</li>
+			                        </div>
+			                    </div>
+			                
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            
+                            <label for="exampleSelect1">Accounting Type<sup-script class="asteric">*</sup-script></label>
+			                
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="Accountingdata"></span>
+			                   <button class=" dropdown-toggle arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down"></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in Accountingvalues | filter:test track by $index"  vng-click="Accountinginput(data.value)">
+			                            <li>{{data.value}}</li>
+			                        </div>
+			                    
+			                </div>
+                        </div>
+                        
+                        <div style="margin-top: 90px!important">
+                            <div class="col-lg-4 col-md-4">
+
+                             
+                            <label for="exampleSelect1">Frequency<sup-script class="asteric">*</sup-script></label>
+			                <div >
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="frequencydata"></span>
+			                   <button class=" dropdown-toggle  arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down arrow"></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in frequencyarray | filter:test track by $index" ng-click="sendtoinput(data)">
+			                            <li>{{data}}</li>
+			                        </div>
+			                    </div>
+			                </div>
+           				 </div>
+
+                           
+                            <div class="col-lg-4 col-md-4">
+                               
+			                <label for="exampleSelect1">Period Start Date<sup-script class="asteric">*</sup-script></label>
+			                 <div class="input-group date" data-provide="datepicker" style="width: 188px;height: 35px">
+			                    <input type="text" class="form-control" placeholder="mm/dd/yyyy" ng-model="date">
+			                    <div class="input-group-addon">
+			                        <span class="glyphicon glyphicon-th"></span>
+			                    </div>
+			                  </div>
+			                 
+			              </div>
+                            
+                            <div class="col-lg-4 col-md-4">
+                                
+                                 <label for="exampleSelect1">Payment Timing<sup-script class="asteric">*</sup-script></label>
+			                <div class="main-input">
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="PaymentTimingdata"></span>
+			                   <button class=" dropdown-toggle  arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down"></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in PaymentTimingvalues | filter:test track by $index" ng-click="PaymentTiminginput(data.value)">
+			                            <li>{{data.value}}</li>
+			                        </div>
+			                    </div>
+			                </div>
+                        </div>
+                        </div>
+                        <div style="margin-top: 190px!important">
+                        <div class="col-lg-4 col-md-4">
+                              
+                                 <label for="exampleSelect1"> Payment Due On<sup-script class="asteric">*</sup-script></label>
+			                <div class="main-input">
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="PaymentDuedata"></span>
+			                   <button class=" dropdown-toggle  arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down "></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in PaymentDueOnvalues | filter:test track by $index" ng-click="PaymentDueinput(data.value)">
+			                            <li>{{data.value}}</li>
+			                        </div>
+			                    </div>
+			                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                
+                                <label for="exampleSelect1"> Payment Due Day<sup-script class="asteric">*</sup-script></label>
+			                <div class="main-input">
+			                    <span><input class="form-control input-field" type="text" placeholder="select"  ng-model="PaymentDueDaydata"></span>
+			                   <button class=" dropdown-toggle  arrowdown" type="button" data-toggle="dropdown">
+			                                    <span class="fa fa-angle-down "></span>
+			                                </button>
+			                    <div class="dropdown-menu list-dropdown" style="overflow-y:scroll;height:150px">
+			                        <input type="text" placeholder="select" ng-model="test">
+			                        <div ng-repeat="data in PaymentDueDayvalues | filter:test track by $index" ng-click="PaymentDueDayinput(data.value)">
+			                            <li>{{data.value}}</li>
+			                        </div>
+			                    </div>
+			                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                               <label for="exampleSelect1">Accounting cost center</label>
+			                <div>
+			                    <span><input class="form-control input-field" type="text" placeholder="0"  ng-model="Accountdata"></span>
+			                   
+			                </div>
+                            </div>
+                            </div>
+                            <div class="checkbox" style="margin-top:300px!important;margin-left:30px;position: relative; ">
+					      <label><input type="checkbox" value="">Option Term Payment</label>
+					    </div>
+					    <div class="form-group" style="margin-top:40px!important;margin-left:30px;position: relative; ">
+					      <label for="pwd">Description:</label>
+					      <input type="text" style="height: 50px!important;" class="form-control" style>
+					    </div>
+                   </div>
+                    <div class="modal-footer">
+                    	<div><i  class="fa fa-info-circle informatin" aria-hidden="true"></i></div><br><p class="letter">information</p>
+                        <button type="button" ng-hide="showIcon" class="add btn btn-default" ng-click="openMOdal()"><i class="fa fa-angle-right"></i></button>
+                       <button type="button" ng-click="saveEditDetails()" ng-show="showIcon" class="add btn btn-default">Save</button>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<modal2-directive></modal2-directive>
+<alert-modal-directive></alert-modal-directive>
