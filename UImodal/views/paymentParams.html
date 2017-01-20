@@ -1,0 +1,61 @@
+<div data-ng-controller="paymentParamsCntrl as ppc">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Payment Parameters</h3>
+        <button class="btn btn-warning btn-place" type="button" data-ng-click="mI.cancel()">X</button>
+    </div>
+    <div class="modal-body modal-body-view" id="modal-body">
+        <form class="form-inline">
+            <div class="form-group col-lg-6">
+                <label for="Paymenttype">Growth Type
+                    <sup-script class="asteric">*</sup-script>
+                </label>
+                <br>
+                <span>
+                 <input class="form-control input-field" type="text" placeholder="select"  data-ng-model=" ppc.paymentParamsDetails.growthType"> </span>
+                <button class="dropdown-toggle arrowposition" type="button" data-toggle="dropdown">
+                    <span class="fa fa-angle-down "></span>
+                </button>
+                <div class="dropdown-menu list-dropdown dropdown-style" style="overflow-y:scroll;height:150px">
+                    <input type="text" placeholder="select" data-ng-model="test">
+                    <div data-ng-repeat="data in mI.getAllDetails.l_GrowthType" | filter:test track by $index " data-ng-click=" ppc.growthInput(data) ">
+                    <li>{{data}}</li>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="Accountingdata ">Fixed Growth
+                <!-- <sup-script class="asteric ">*</sup-script> -->
+            </label><br>
+            <span><input class="form-control input-field " type="text " placeholder="select" data-ng-model="ppc.paymentParamsDetails.fixedgrowth"></span>
+            <!-- <button class=" dropdown-toggle arrowposition " type="button " data-toggle="dropdown ">
+                <span class="fa fa-angle-down "></span>
+            </button>
+            <div class="dropdown-menu list-dropdown dropdown-style col-lg-4 " style="overflow-y:scroll;height:150px ">
+                <input type="text " placeholder="select " data-ng-model="test ">
+                <div data-ng-repeat="data in mI.getAllDetails.l_AccountingType | filter:test track by $index " data-ng-click="fnc.Accountinginput(data) ">
+                    <li>{{data}}</li>
+                </div>
+            </div> -->
+        </div><br><br>
+        <div class="form-group col-lg-6">
+            <label for="Accountingdata">Charge Amount Basis
+                <sup-script class="asteric">*</sup-script>
+            </label><br>
+            <span><input class="form-control input-field" type="text" placeholder="select"  data-ng-model="ppc.paymentParamsDetails.chargedata"></span>
+            <button class=" dropdown-toggle arrowposition" type="button" data-toggle="dropdown">
+                <span class="fa fa-angle-down"></span>
+            </button>
+            <div class="dropdown-menu list-dropdown dropdown-style" style="overflow-y:scroll;height:150px ">
+                <input type="text " placeholder="select" data-ng-model="test">
+                <div data-ng-repeat="data in mI.getAllDetails.l_ChargeAmountBasis"| filter:test track by $index data-ng-click="ppc.ChargeAmountInput(data)">
+                    <li>{{data}}</li>
+                </div>
+            </div>
+        </div>
+
+
+        </form>
+    </div>
+
+   
+</div>

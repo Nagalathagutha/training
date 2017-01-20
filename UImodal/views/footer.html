@@ -1,0 +1,22 @@
+<div data-ng-hide="mI.toNext" data-ng-include="'views/modalbodytemplate.html'"></div>
+<div data-ng-show="mI.toNext" data-ng-include="'views/paymentParams.html'"></div>
+<div class="modal-footer">
+    <div class="footer-icons"><i class="fa fa-info-circle footer-icons" aria-hidden="true"></i>
+    
+    <br>
+    <p>Information</p>
+    </div>
+    <div><i class="fa fa-calendar-o footer-icons" aria-hidden="true"></i>
+    <br>
+    <p class="letter">Parameters</p>
+     </div>
+    
+    <button class="btn btn-primary" type="button"  data-ng-hide="mI.toNext" data-ng-click="mI.next()"><i class="fa fa-angle-right "></i></button>
+
+    <button class="btn btn-primary" type="button" data-ng-show="mI.toNext" data-ng-click="mI.previous()"><i class="fa fa-angle-left "></i></button>
+
+    <button class="btn btn-primary"  data-ng-if="mI.showSave" type="button"   data-ng-click="mI.editDetails()">save</button>
+
+    <button class="btn btn-primary" type="button" data-ng-show="!mI.showSave && mI.toNext" data-ng-click="mI.save()">Generate</button>
+    <!--  <button class="btn btn-primary " type="button " ng-click="mI.save() ">save</button> -->
+</div>

@@ -1,0 +1,79 @@
+.modal-body-view{
+	height:490px;
+	
+}
+.btn-place{
+	margin-top: -30px;
+	float:right;
+}
+ 
+ .arrowposition{
+ 	position: relative;
+    right: 30px;
+ 	/*top: 38px;*/
+    background-color:white;
+    border:none;
+    color:black;
+ }
+ .dropdown-style{
+  
+   /*position:relative;*/
+  width:195px;
+ 
+ }
+table {
+    border-collapse: collapse;
+    margin-top:150px;
+}
+
+.thpadding{
+    text-align: left;
+    padding: 15px;
+}
+
+.trbottom{
+    border-bottom:1px solid rgb(234,234,234)!important;
+}
+
+
+th {
+    background-color:rgb(234,234,234)!important;
+    
+}
+.plus{
+    color:rgb(161,175,160);
+    font-weight:normal;
+}
+.addcolor{
+    background-color: rgb(227,241,226)!important;
+}
+.footer-icons{
+   float:left;
+padding-left: 10px;
+ font-size:16px;
+ 
+ background-color:white;
+}
+
+ .letter{
+ float:left;
+ padding-left: 10px;
+ font-size:16px;
+ 
+ }
+ .innertable{
+    margin-top:50px!important;
+    
+}
+.innertd{
+    padding:0px!important;
+}
+.arrowtoggle{
+    background-color:white;
+    border:none;
+    color:black;
+ }
+ .add{
+background-color: rgb(227,241,226)!important;
+border:none!important;  
+}

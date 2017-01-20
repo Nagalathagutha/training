@@ -1,0 +1,60 @@
+<div class="col-lg-12 col-md-12">
+    <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-md-2"></th>
+                    <th class="col-md-2">Frequency
+                        <br>Type</th>
+                    <th class="col-md-2">Start
+                        <br> Date</th>
+                    <th class="col-md-2">End Date</th>
+                    <th class="col-md-2">Total Cash
+                        <br> With Tax</th>
+                    <th class="col-md-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody data-ng-repeat="(key,value) in ctrl.tableData track by $index" data-ng-if='value.length > 0'>
+                <tr data-toggle="collapse" data-target="#{{$index}}" class="accordion-toggle trbottom">
+                    <td colspan="5" class="col-md-2">{{key}}</td>
+                    <td class="col-md-2">
+                        <button id='togglebutton' class="arrowtoggle" data-ng-click='show=!show;' data-ng-class="{'fa fa-angle-right':!show,'fa fa-angle-down':show}" aria-hidden="true"> </button>
+                    </td>
+                </tr>
+                <td colspan="6" class="hiddenRow">
+                    <div class="accordian-body collapse" id="{{$index}}">
+                        <table class="innertable col-lg-12  col-md-12">
+                            <tbody data-ng-repeat="eachRow in value">
+                                <tr>
+                                    <td class="col-md-2"></td>
+                                    <td class="col-md-2">{{eachRow.frequencydata}}</td>
+                                    <td class="col-md-2">{{eachRow.date}}</td>
+                                    <td class="col-md-2">{{eachRow.PaymentDueDaydata}}</td>
+                                    <td class="col-md-2"></td>
+                                    <td class="col-md-2">
+                                        <button class="arrowtoggle"><i class="fa fa-times" aria-hidden="true" data-ng-click="ctrl.delete(key,$index)"></i>
+                                        </button>
+                                        <button class="arrowtoggle"><i class="fa fa-pencil" aria-hidden="true" data-ng-click="ctrl.editmodal(key,$index)"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tbody>
+            <thead class="addcolor">
+                <tr>
+                    <td class="col-md-2"></td>
+                    <td class="col-md-2"></td>
+                    <td class="col-md-2"></td>
+                    <td class="col-md-2">
+                        <button class="add" data-ng-click="ctrl.open()"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                    </td>
+                    <td class="col-md-2"></td>
+                    <td class="col-md-2"></td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
